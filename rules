@@ -44,6 +44,8 @@ Allow
 
 com.google.*
 
+com.android.chrome
+
 com.android.vending
 
 com.topjohnwu.magisk
