@@ -1,23 +1,15 @@
 [RoutingRule]
-
 # All requests go through the proxy.
-
 FINAL, Proxy
 
 [RoutingDomainStrategy]
-
 AsIs
 
 [LocalPolicy]
-
 bufferSize = 4096
-
 connIdle = 300
-
 downlinkOnly = 0
-
 handshake = 4
-
 uplinkOnly = 0
 
 [DnsServer]
@@ -29,31 +21,21 @@ uplinkOnly = 0
 [DnsClientIp]
 
 [Log]
-
 loglevel = none
 
 [PerAppVpn]
-
 On
 
 [PerAppMode]
-
 Allow
 
 [PerAppAllow]
-
 com.google.*
-
 com.android.chrome
-
 com.android.vending
-
 com.topjohnwu.magisk
-
 com.android.providers.downloads
-
 com.wunderkinder.wunderlistandroid
-
 org.telegram.messenger
 
 [PerAppDisallow]
