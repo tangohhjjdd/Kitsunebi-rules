@@ -1,8 +1,20 @@
 [RoutingRule]
-# All requests go through the proxy.
+DOMAIN-KEYWORD, geosite:google, Proxy
+
+# Bypass mainland china domains.
+DOMAIN-KEYWORD, geosite:cn, Direct
+
+# Bypass mainland china IPs and LAN IPs.
+GEOIP, cn, Direct
+GEOIP, private, Direct
+
+# Other requests go through the proxy.
 FINAL, Proxy
 
 [RoutingDomainStrategy]
+AsIs
+
+[FreedomDomainStrategy]
 AsIs
 
 [LocalPolicy]
@@ -13,6 +25,8 @@ handshake = 4
 uplinkOnly = 0
 
 [DnsServer]
+223.5.5.5
+1.1.1.1
 
 [DnsRule]
 
